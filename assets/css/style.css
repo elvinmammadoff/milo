@@ -236,7 +236,8 @@ body {
 .gallery-thumbs__rating {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  flex-wrap: wrap;
+  gap: .4rem;
   margin: 0;
 }
 .rating ion-icon {
@@ -402,8 +403,8 @@ body {
   .rating ion-icon {
     font-size: .8rem;
   }
-  .gallery-thumbs__content .gallery-thumbs__bottom {
+  /* .gallery-thumbs__content .gallery-thumbs__bottom {
     padding-left: .8rem;
     padding-right: .8rem;
-  }
+  } */
 }
