@@ -271,7 +271,7 @@ body {
   padding-right: 1rem;
   position: relative;
   z-index: 1;
-  padding: 60px 0;
+  padding: 40px 0;
 }
 .swiper-caption__ctg {
   text-transform: uppercase;
@@ -385,7 +385,7 @@ body {
     align-items: flex-end;
   }
   .gallery-thumbs {
-    padding: 30px;
+    padding: 40px 30px;
   }
   .thumb-slider__control {
     display: none;
