@@ -385,12 +385,15 @@ body {
     align-items: flex-end;
   }
   .gallery-thumbs {
-    padding: 0 30px;
+    padding: 30px;
   }
   .thumb-slider__control {
     display: none;
   }
   .swiper-caption {
     align-items: flex-start;
+  }
+  .swiper-wrapper {
+    margin-bottom: 0;
   }
 }
