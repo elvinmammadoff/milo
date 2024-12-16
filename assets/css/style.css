@@ -396,4 +396,10 @@ body {
   .swiper-wrapper {
     margin-bottom: 0;
   }
+  .gallery-thumbs__rating span {
+    font-size: .8rem;
+  }
+  .rating ion-icon {
+    font-size: .8rem;
+  }
 }
