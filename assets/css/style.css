@@ -237,7 +237,8 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: .4rem;
+  column-gap: .5rem;
+  row-gap: .3rem;
   margin: 0;
 }
 .rating ion-icon {
@@ -397,14 +398,10 @@ body {
   .swiper-wrapper {
     margin-bottom: 0;
   }
-  .gallery-thumbs__rating span {
-    font-size: .8rem;
-  }
   .rating ion-icon {
     font-size: .8rem;
   }
-  /* .gallery-thumbs__content .gallery-thumbs__bottom {
-    padding-left: .8rem;
-    padding-right: .8rem;
-  } */
+  .gallery-thumbs .swiper-slide {
+    height: 200px;
+  }
 }
