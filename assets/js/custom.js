@@ -5,6 +5,24 @@ var slider = new Swiper ('.gallery-slider', {
     speed: 4000,
     effect: "fade",
     loopedSlides: 3, 
+    breakpoints: {
+      // when window width is >= 768px
+      768: {
+        loopedSlides: 2, 
+      },
+      // when window width is >= 1024px
+      992: {    
+        loopedSlides: 2, 
+      },
+      // when window width is >= 1024px
+      1199: {    
+        loopedSlides: 2, 
+      },
+      // when window width is >= 1280px
+      1280: {
+        loopedSlides: 3, 
+      }
+    }
 });
 
 var thumbs = new Swiper ('.gallery-thumbs', {
@@ -41,7 +59,7 @@ var thumbs = new Swiper ('.gallery-thumbs', {
       },
       // when window width is >= 1024px
       1199: {    
-        slidesPerView: 2.1,
+        slidesPerView: 2,
       },
       // when window width is >= 1280px
       1280: {
