@@ -282,13 +282,10 @@ body
 .thumb-slider__control
   .swiper-pagination
     position: relative
-    width: 15rem
-    bottom: .3rem
     display: flex
     align-items: center
     justify-content: center
-    gap: 6px
-    background: var(--white)
+    gap: .6rem
 
     .swiper-pagination-bullet-active
       background: var(--primary)
@@ -317,7 +314,18 @@ body
       color: var(--white)
 
   .swiper-button-prev
-    right: 20px
+    margin-right: 20px
+
+.thumb-slider__control-container
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+.swiper-pagination-bullet 
+  background: var(--white);
+  width: .8rem;
+  height: .8rem;
+  opacity: .5;
 
 /* Navigation
  *-------------------------
@@ -325,3 +333,8 @@ body
 .gallery-thumbs
   .swiper-button-next, .swiper-button-prev
     background-image: none
+
+.thumb-slider__navigation 
+  display: flex;
+  align-items: center;
+

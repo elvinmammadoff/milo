@@ -1,3 +1,43 @@
+/* ----------------------------------
+
+Name: main.js
+Author: Alissio
+Website: https://www.miloslider.com
+Exclusively available here: https://themeforest.net/user/alissio
+
+------------------------------------- */
+
+
+
+
+
+/*====================================================
+
+
+	Table of Contents
+
+		01. Gallery Slider
+
+			+ Fade Carousel
+			+ Thumb Slider
+      + Control Fade and Thumb Sliders
+
+
+
+	
+====================================================*/
+
+
+
+/*======================
+
+	01. Gallery Slider 
+
+========================*/
+
+
+/* Fade Carousel 
+-------------------------*/
 var slider = new Swiper ('.gallery-slider', {
     slidesPerView: 1,
     centeredSlides: true,
@@ -10,11 +50,11 @@ var slider = new Swiper ('.gallery-slider', {
       768: {
         loopedSlides: 2, 
       },
-      // when window width is >= 1024px
+      // when window width is >= 992px
       992: {    
         loopedSlides: 2, 
       },
-      // when window width is >= 1024px
+      // when window width is >= 1199px
       1199: {    
         loopedSlides: 2, 
       },
@@ -25,12 +65,19 @@ var slider = new Swiper ('.gallery-slider', {
     }
 });
 
+
+/* Thumb Slider
+-------------------------*/
 var thumbs = new Swiper ('.gallery-thumbs', {
     slidesPerView: 3,
     spaceBetween: 0,
     centeredSlides: true,
     loop: true,
-    speed: 800,
+    speed: 2000,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
+    },
     slideToClickedSlide: true,
     effect: "coverflow",
     coverflowEffect: {
@@ -40,10 +87,13 @@ var thumbs = new Swiper ('.gallery-thumbs', {
       modifier: 3,
       slideShadows: true
     },
-    // pagination: {
-    //   el: '.swiper-pagination',
-    //   clickable: true,
-    // },
+    onmouseover: {
+      autoplay: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -53,11 +103,11 @@ var thumbs = new Swiper ('.gallery-thumbs', {
       768: {
         slidesPerView: 2.1,
       },
-      // when window width is >= 1024px
+      // when window width is >= 992px
       992: {    
         slidesPerView: 2.03,
       },
-      // when window width is >= 1024px
+      // when window width is >= 1199px
       1199: {    
         slidesPerView: 2,
       },
@@ -66,21 +116,18 @@ var thumbs = new Swiper ('.gallery-thumbs', {
         slidesPerView: 3,
       }
     }
-  //   on: { 
-  //     slideChangeTransitionStart: function () {
-  //       console.log('slideChange');
-  //       AOS.init();
-  //     },
-      
-  //     slideChangeTransitionEnd: function () {
-  //       console.log('slideChange 2');
-  //   },
-  // }
 });
 
-//slider.params.control = thumbs;
-//thumbs.params.control = slider;
 
+$('.gallery-thumbs .swiper-slide').hover(function(){
+  thumbs.autoplay.stop();
+}, function(){
+  thumbs.autoplay.start();
+});
+
+
+/* Control Fade and Thumb Sliders
+-------------------------*/
 slider.controller.control = thumbs;
 thumbs.controller.control = slider;
 
