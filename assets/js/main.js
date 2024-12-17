@@ -73,9 +73,9 @@ var thumbs = new Swiper ('.gallery-thumbs', {
     spaceBetween: 0,
     centeredSlides: true,
     loop: true,
-    speed: 2000,
+    speed: 1500,
     autoplay: {
-      delay: 2000,
+      delay: 1500,
       disableOnInteraction: false
     },
     slideToClickedSlide: true,
@@ -118,7 +118,7 @@ var thumbs = new Swiper ('.gallery-thumbs', {
     }
 });
 
-
+// Stop on Hover
 $('.gallery-thumbs .swiper-slide').hover(function(){
   thumbs.autoplay.stop();
 }, function(){
