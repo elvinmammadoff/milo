@@ -347,7 +347,6 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: .6rem;
 		.swiper-pagination-bullet-active {
 			background: var(--primary);
 		}
@@ -381,12 +380,11 @@ body {
 .thumb-slider__control-container {
   display: flex;
   align-items: center;
-	margin-right: 2rem;
+  gap: 2rem;
 }
 .swiper-pagination-bullet {
   background: var(--white);
   width: .8rem;
   height: .8rem;
   opacity: .5;
-	margin-right: 1rem;
 }
