@@ -5306,7 +5306,7 @@ strong,
 b {
   font-weight: bold;
   line-height: inherit; 
-  color: #fff;
+  color: #333;
 }
 
 small {
@@ -5314,8 +5314,8 @@ small {
   line-height: inherit; }
 
 code {
-  color: #10add3;
-  background-color: #182229;
+  color: #fff;
+  background-color: #0064d4;
   border-radius: 4px;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: normal;
