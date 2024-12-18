@@ -312,7 +312,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  margin-right: 2rem;
 }
 .thumb-slider__control .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
@@ -322,6 +322,7 @@ body {
   width: 1rem;
   height: 1rem;
   opacity: .5;
+  margin-right: 1rem;
 }
 
 
