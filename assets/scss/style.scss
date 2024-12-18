@@ -349,6 +349,7 @@ body {
 		justify-content: center;
 		.swiper-pagination-bullet-active {
 			background: var(--primary);
+			opacity: 1;
 		}
 	}
 	position: relative;
