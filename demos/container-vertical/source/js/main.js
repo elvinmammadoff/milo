@@ -70,7 +70,7 @@ var slider = new Swiper ('.gallery-slider', {
 -------------------------*/
 var thumbs = new Swiper ('.gallery-thumbs', {
   slidesPerView: 6,
-  spaceBetween: 0,
+  spaceBetween: 4,
   centeredSlides: true,
   loop: true,
   speed: 1500,

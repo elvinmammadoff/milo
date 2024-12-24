@@ -211,9 +211,9 @@ body {
 		right: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba($black,.7);
+		background-color: rgba($black,.3);
 	}
-	.gallery-thumbs__price {
+	.gallery-thumbs__off {
 		position: absolute;
 		right: 0px;
 		top: 0px;
@@ -236,18 +236,12 @@ body {
 	font-weight: 600;
 	font-size: 1.3rem;
 }
-.gallery-thumbs__rating {
+.gallery-thumbs__price {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
 	column-gap: .5rem;
 	margin: 0;
-}
-.rating {
-	ion-icon {
-		font-size: 1rem;
-		color: $gold;
-	}
 }
 
 
