@@ -43,7 +43,6 @@ p {
     color: #333;
 }
 ul, ol {
-    margin-left: 0;
     list-style: none;
     margin-bottom: 0;
 }
@@ -53,10 +52,11 @@ li {
 }
 pre {
     white-space: pre-wrap;
-    border: 1px solid #1f2c36;
-    color: #fff;
-    padding: 0 10px;
-    background: #182229;
+    border: 1px solid #ddd;
+    color: #333;
+    border-radius: 4px;
+    padding: 8px;
+    background: #f4f4f4;
 }
 pre.css {
     background-image: url('../img/pre_bg.png');
@@ -188,19 +188,20 @@ ul.list-disc {
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
+    font-size: 1.8rem;
 }
 
 .section-title span {
     background: #0064d4;
     color: #fff;
-    width: 42px;
-    height: 42px;
+    width: 34px;
+    height: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 16px;
+    margin-right: 10px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -246,13 +247,13 @@ ul.list-disc {
     margin: 0;
 }
 #sidebar ol li {
-    font-size: 16px;
+    font-size: 14px;
     padding: 0;
 }
 #sidebar ol li a {
     color: #333;
     border-bottom: 0;
-    padding: 6px 30px;
+    padding: 5px 30px;
     display: block;
     font-weight: bold;
 }
@@ -264,7 +265,7 @@ ul.list-disc {
     text-decoration: none;
 }
 #sidebar ul li a {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: normal;
     padding-left: 30px;
 }

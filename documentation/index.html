@@ -42,32 +42,38 @@
                 </ul>
             </li>
             <li>
-              <a href="#files-structure" class="files-structure">2. Files Structure</a>
+              <a href="#files-structure" class="files-structure">2. Files Organization</a>
             </li>
             <li>
-              <a href="#html-structure" class="html-structure">3. HTML Structure</a>
+              <a href="#html-structure" class="html-structure">3. Usage Example</a>
             </li>
             <li>
-              <a href="#css-structure" class="css-structure">4. CSS Structure</a>
+              <a href="#code-standarts" class="code-standarts">4. Code Standarts</a>
             </li>
             <li>
-              <a href="#fonts-include" class="fonts-include">5. Custom Fonts Include</a>
+              <a href="#css-structure" class="css-structure">5. CSS Structure</a>
             </li>
             <li>
-              <a href="#javascript-structure" class="javascript-structure">6. JavaScript Structure</a>
+              <a href="#fonts-include" class="fonts-include">6. Fonts Include</a>
             </li>
             <li>
-              <a href="#site-title" class="site-title">7. Basic Site Settings</a>
+              <a href="#javascript-structure" class="javascript-structure">7. JavaScript Structure</a>
+            </li>
+            <li>
+              <a href="#site-title" class="site-title">8. Basic Site Settings</a>
                 <ul>
                     <li>
-                        <a href="#site-title" class="site-title">7.1. Change Site Title and Favicon</a>
+                        <a href="#site-title" class="site-title">8.1. Change Site Title</a>
                     </li>
                 </ul>
             </li>
-            <li><a href="#credits" class="credits">8. Sources and Credits</a></li>
-            <li><a href="#support" class="support">9. Support</a></li>
-            <li><a href="#updates" class="updates">10. Regular Updates</a></li>
-            <li><a href="#thanks" class="thanks">11. Thanks 😊</a></li>
+            <li><a href="#installation" class="installation">9. Installation</a></li>
+            <li><a href="#customization" class="customization">10. Customization Options</a></li>
+            <li><a href="#testing" class="testing">11. Testing</a></li>
+            <li><a href="#credits" class="credits">12. Sources and Credits</a></li>
+            <li><a href="#support" class="support">13. Support</a></li>
+            <li><a href="#updates" class="updates">14. Regular Updates</a></li>
+            <li><a href="#thanks" class="thanks">15. Thanks 😊</a></li>
           </ol>
 
         </div>
@@ -136,7 +142,7 @@
           <br>
           Do not directly upload the zip file you downloaded from Themeforest. To begin, unzip the Themeforest file you just downloaded which contains the following files:</p>
 
-          <ul class="list-disc mt-2">
+          <ul class="list-disc">
             <li><strong>documentation:</strong> contains what you are reading now.</li>
             <li><strong>source:</strong> contains assets files.</li>
             <li><strong>index.html:</strong> main HTML file.</li>
@@ -144,7 +150,7 @@
 
           <p class="mt-2"><strong>Key features:</strong></p>
 
-          <ul>
+          <ul class="list-disc">
             <li>
               <strong>Completely Responsive Design</strong>
               <span class="d-block">Optimized viewing on desktop, tablet and mobile devices.</span>
@@ -177,7 +183,7 @@
 
           <p class="mt-2"><strong>Other features:</strong></p>
 
-          <ul>
+          <ul class="list-disc">
             <li>Based on Bootstrap 5.3.3 and Swiper Slider 4.1.1</li>
             <li>W3C HTML valid code</li>
             <li>Better Support (response within 24 hours)</li>
@@ -190,58 +196,267 @@
 
         <section id="files-structure" class="section">
 
-          <h1 class="section-title"><span>2.</span> Files Structure</h1>
+          <h1 class="section-title"><span>2.</span> Files Organization</h1>
 
-          <img src="./img/file-structure.jpg" alt="file-structure">
+          <p>Ensure the project folder is well-structured:</p>
+<pre>
+  miloslider/
+  ├── documentation/       # This Documentation File
+  ├── demo/                # Demo Slider Files
+  │   ├── index.html       # Example Slider HTML
+  │   ├── assets/          # CSS, JS, Images
+  │       ├── css/
+  │       ├── js/
+  │       ├── img/
+  ├── source/              # Source Files (Unminified JS, CSS)
+  └── README.txt           # Basic Info & Licensing
+</pre>
         </section>
 
         <section id="html-structure" class="section">
 
-          <h1 class="section-title"><span>3.</span> HTML Structure</h1>
+          <h1 class="section-title"><span>3.</span> Usage Example</h1>
 
-          <img src="./img/html-structure.jpg" alt="html-structure">
+          <p>Basic HTML Structure for Milo Slider:</p>
+<pre>
+  <code>
+  <!-- Gallery -->
+  <div class="gallery"> 
+
+    <!-- Gallery Fade Carousel -->
+    <div class="swiper-container gallery-slider">
+      <div class="swiper-wrapper">
+
+        <!-- Start Gallery Slide -->
+        <div class="swiper-slide" style="background: url('assets/image/img-01.jpg') no-repeat center top / cover">
+          <div class="container h-100">
+
+            <!-- Caption -->
+            <div class="swiper-caption">
+              <div class="row">
+                <div class=" col-md-5 col-lg-5">
+
+                  <!-- Category -->
+                  <span class="swiper-caption__ctg">Dinner</span>
+
+                  <!-- Title -->
+                  <h1 class="swiper-caption__ttl">Swordfish Fillet</h1>
+
+                  <!-- Text -->
+                  <p class="swiper-caption__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                  </p> 
+
+                  <!-- Link -->
+                  <a class="swiper-caption__btn" href="">Order Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Gallery Slide -->
+      </div>
+    </div>
+  </div> 
+  </code>
+</pre>
+        </section>
+
+        <section id="code-standarts" class="section">
+
+          <h1 class="section-title"><span>4.</span> Code Standards</h1>
+
+          <ul class="list-disc">
+            <li>Validate all HTML and CSS using tools like the <a href="https://validator.w3.org/">W3C Validator</a>.</li>
+            <li>Write clean, well-commented JavaScript code and follow best practices.</li>
+          </ul>
         </section>
         
         <section id="css-structure" class="section">
 
-          <h1 class="section-title"><span>4.</span> CSS Structure</h1>
+          <h1 class="section-title"><span>5.</span> CSS Structure</h1>
 
-          <img src="./img/css-structure.jpg" alt="css-structure">
+<pre>
+  <code>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom style -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="assets/css/responsive.min.css">    
+  </code>
+</pre>
         </section>
         
         <section id="fonts-include" class="section">
 
-          <h1 class="section-title"><span>5.</span> Custom Fonts Include</h1>
+          <h1 class="section-title"><span>6.</span> Fonts Include</h1>
 
-          <img src="./img/fonts-include.jpg" alt="fonts-include">
+          <p>Google Fonts imported inside <code>style.min.css</code> file</p>
+
+<pre>
+  <code>@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');</code>
+</pre>
         </section>
         
         <section id="javascript-structure" class="section">
 
-          <h1 class="section-title"><span>6.</span> JavaScript Structure</h1>
+          <h1 class="section-title"><span>7.</span> JavaScript Structure</h1>
 
-          <img src="./img/javascript-structure.jpg" alt="javascript-structure">
+<pre>
+  <code>
+  <!-- Jquery -->
+  <script src="assets/js/jquery.min.js"></script>
+
+  <!-- Swiper -->
+  <script src="assets/js/swiper.js"></script>
+
+  <!-- Ion Icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="assets/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+  <!-- Custom -->
+  <script src="assets/js/main.min.js"></script>
+  </code>
+</pre>
         </section>
 
         <section id="site-title" class="section sub-section">
 
-          <h2 class="section-title"><span>7.1</span> Change Site Title and Favicon</h2>
+          <h2 class="section-title"><span>8.1</span> Change Site Title</h2>
 
-          <p class="mt-1">To change your Site Title open the index.html in your editor and go to the location by following screenshot which are given bellow.</p>
+          <p class="mt-1">To change your Site Title open the <code>index.html</code> in your editor and go to the <code>title</code> tag.</p>
 
-          <img src="./img/site-title.jpg" alt="title-change">
+<pre>
+  <code>
+  <title>Carousel Slider</title>
+  </code>
+</pre>
 
-          <p class="text-center mt-2">You can change Site title following this screenshot</p>
 
-          <img src="./img/favicon.jpg" alt="favicon-change">
+        </section>
 
-          <p class="text-center mt-2">You can change Favicon following this screenshot</p>
+        <section id="installation" class="section">
 
+          <h1 class="section-title"><span>9.</span> Installation</h1>
+
+          <p>We minified and used the following code to initialize the slider:</p>
+  <pre>
+      <code>
+      /* Fade Carousel 
+      -------------------------*/
+      var slider = new Swiper ('.gallery-slider', {
+          slidesPerView: 1,
+          centeredSlides: true,
+          loop: true,
+          speed: 4000,
+          effect: "fade",
+          loopedSlides: 3, 
+          breakpoints: {
+            // when window width is >= 768px
+            768: {
+              loopedSlides: 2, 
+            },
+            // when window width is >= 992px
+            992: {    
+              loopedSlides: 2, 
+            },
+            // when window width is >= 1199px
+            1199: {    
+              loopedSlides: 2, 
+            },
+            // when window width is >= 1280px
+            1280: {
+              loopedSlides: 3, 
+            }
+          }
+      });</code>
+    </pre>          
+        </section>
+
+        <section id="customization" class="section">
+
+          <h1 class="section-title"><span>10.</span> Customization Options</h1>
+          <table>
+            <tr>
+                <th>Option</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>slidesPerView</td>
+                <td>Number</td>
+                <td>1</td>
+                <td>Number of slides per view</td>
+            </tr>
+            <tr>
+                <td>centeredSlides</td>
+                <td>Boolean</td>
+                <td>true</td>
+                <td>If true, then active slide will be centered, not always on the left side.</td>
+            </tr>
+            <tr>
+                <td>spaceBetween</td>
+                <td>Number</td>
+                <td>0</td>
+                <td>Distance between slides in px.</td>
+            </tr>
+            <tr>
+                <td>loop</td>
+                <td>Boolean</td>
+                <td>true</td>
+                <td>Set to true to enable continuous loop mode</td>
+            </tr>
+            <tr>
+                <td>speed</td>
+                <td>Number</td>
+                <td>1500</td>
+                <td>Duration of transition between slides</td>
+            </tr>
+            <tr>
+                <td>slideToClickedSlide</td>
+                <td>Boolean</td>
+                <td>true</td>
+                <td>Set to true and click on any slide will produce transition to this slide</td>
+            </tr>
+            <tr>
+                <td>pagination</td>
+                <td>Boolean</td>
+                <td>true</td>
+                <td>Object with pagination parameters or boolean true to enable with default settings</td>
+            </tr>
+            <tr>
+                <td>navigation</td>
+                <td>Boolean</td>
+                <td>true</td>
+                <td>Object with navigation parameters or boolean true to enable with default settings</td>
+            </tr>
+          </table>
+        </section>
+
+        <section id="testing" class="section">
+
+          <h1 class="section-title"><span>11.</span> Testing</h1>
+
+          <ul class="list-disc">
+              <li><strong>Cross-Browser Compatibility:</strong> Test the slider on Chrome, Firefox, Edge, and Safari.</li>
+              <li><strong>Responsiveness:</strong> Ensure it works seamlessly on mobile, tablet, and desktop devices.</li>
+              <li><strong>Performance Optimization:</strong> Minify CSS/JS files and optimize assets for faster loading times.</li>
+          </ul>
         </section>
 
         <section id="credits" class="section">
 
-          <h1 class="section-title"><span>8.</span> Sources and Credits</h1>
+          <h1 class="section-title"><span>12.</span> Sources and Credits</h1>
 
           <p>The product uses following resources by third parties.</p>
 
@@ -266,18 +481,17 @@
 
         <section id="support" class="section">
 
-          <h1 class="section-title"><span>9.</span> Support</h1>
+          <h1 class="section-title"><span>13.</span> Support</h1>
 
-          <h2 class="mt-1">Support Scope</h2>
-
-          <p>Please be reminded that you have purchased a very affordable product and you have not paid for a full-time web design agency. Occasionally, we will help with small tweaks, but these requests will be put on a lower priority due to their nature.</p>
+          <span>For any questions or issues, please contact our support team:</span>
+          <p><strong>Email</strong>: alissioteam@gmail.com</p>
 
 
           <div class="sub-section">
 
             <h2 class="mt-1">Included in Free Support Scope:</h2>
 
-            <ul>
+            <ul class="list-disc">
               <li>Fixing bugs</li>
               <li>Helping clients in changing site contents by sending instructions that couldn’t be covered by documentation</li>
             </ul>
@@ -288,7 +502,7 @@
 
             <h2 class="mt-1"><span class="red">NOT</span> Included in Free Support Scope:</h2>
 
-            <ul>
+            <ul class="list-disc">
               <li>Any type of custom changes</li>
               <li>Any type of request to update clients’ site contents</li>
             </ul>
@@ -302,7 +516,7 @@
                   We understand that some clients need custom changes while using our template.
                   For that we kept an option for paid support which includes:</p>
 
-              <ul>
+              <ul class="list-disc">
                   <li>Custom change request</li>
                   <li>Custom pages</li>
                   <li>Custom features</li>
@@ -316,7 +530,7 @@
 
             <h2 class="mt-1">Before seeking support, please...</h2>
 
-            <ul>
+            <ul class="list-disc">
               <li>Make sure your question is a valid item issue and not a customization request.</li>
               <li>Make sure you have read through the documentation or any related video guides before asking support on
                 how to accomplish a task.</li>
@@ -329,49 +543,25 @@
 
         <section id="updates" class="section">
 
-          <h1 class="section-title"><span>10.</span> Regular Updates</h1>
+          <h1 class="section-title"><span>14.</span> Regular Updates</h1>
 
           <p>We’re always improving our skills and knowledge so we’re making changes regularly. From bug fixes to new
             awesome features, updates generally come at least twice a month.
           <p>
 
-<pre class="css">
-
-  V. 3.4.2 – 09.12.2024
-  - Fixed: Loading Overlay fadeOut problem in Home v1
-  - Fixed: UI problems ( Hero and other section height ) in Home v3
-  - Fixed: AOS library bug ( Listener added for a 'DOMNodeRemoved' mutation event ) in all Home versions
-  - Updated: AOS v2.3.4
-  - Added: New scroll animation effects to all Home versions
-  - Added: Favicon meta link to all Home versions
-  - Tweak: Updated Documentation
-
-  V. 3.3.1 – 17.10.2024
-  - New: Home Page version 1 Single Product page added
-  - Tweak: Updated Documentation
-
-  V. 3.2.1 – 29.06.2024
-  - New: Home page version 3 added
-  - Tweak: Improved Documentation
-
-  V. 2.1.1 – 27.08.2023
-  - New: Home page version 2 added;
-  - Added gallery section with Fancybox popup plugin to all versions
-  - Fixed: all validation errors and warnings
-  - Tweak: Improved Documentation
-  
-  V. 1.0.0 – 20.01.2021
+<pre>
+  V. 1.0.0 – 20.12.2024
   - Initial release
 </pre> 
         </section>
 
         <section id="thanks" class="section">
 
-          <h1 class="section-title"><span>11.</span> Thanks</h1>
+          <h1 class="section-title"><span>15.</span> Thanks</h1>
 
           <p>Once again thank you for purchasing one of our Templates.<p>
-            <h4 class="d-block">Best Regards</h4>
-            <a href="https://themeforest.net/user/alissio" target="_blank" class="fs-2">Alissio</a>
+            <h5 class="d-block">Best Regards</h5>
+            <a href="https://themeforest.net/user/alissio" target="_blank">Alissio</a>
 
             <footer class="mt-4">
               <p>© Documentation - Milo Slider</p>

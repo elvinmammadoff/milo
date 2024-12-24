@@ -1,0 +1,373 @@
+@charset "utf-8"
+
+/* ----------------------------------
+ *
+ *Name: style.css
+ *Author: Alissio
+ *Website: https://www.miloslider.com
+ *Exclusively available here: https://themeforest.net/user/alissio
+ *
+ *-------------------------------------
+
+/*====================================================
+ *
+ *
+ *	Table of Contents
+ *	
+ *	
+ *
+ *		01. Generel Styles
+ *
+ *			+ Generate Google Fonts 
+ *			+ Custom Fonts 
+ *			+ Essentials
+ *      + Header
+ *
+ *		02. Gallery Slider
+ *
+ *			+ Fade Carousel
+ *			+ Thumb Slider
+ *
+ *		03. Swiper Slider
+ *
+ *			+ Navigation
+ *
+ *
+ *
+ *	
+ *====================================================
+
+/*======================
+ *
+ *	01. Generel Styles 
+ *
+ *========================
+
+/* Generate Google Fonts 
+ *-------------------------
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+
+/* Custom Fonts 
+ *-------------------------
+@font-face
+  font-family: 'Tuesday Night'
+  src: url('../../assets/fonts/TuesdayNight-Regular.eot')
+  src: url('../../assets/fonts/TuesdayNight-Regular.eot?#iefix') format("embedded-opentype"), url('../../assets/fonts/TuesdayNight-Regular.woff2') format("woff2"), url('../../assets/fonts/TuesdayNight-Regular.woff') format("woff"), url('../../assets/fonts/TuesdayNight-Regular.ttf') format("truetype"), url('../../assets/fonts/TuesdayNight-Regular.svg#TuesdayNight-Regular') format("svg")
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+/* Essentials
+ *-------------------------
+
+\:root
+  --primary:#a2783a
+  --white:#fff
+  --gray:#ccc
+  --grayDark:#333
+  --mainFont:"Roboto", sans-serif
+  --black_10:rgba(0, 0, 0, 0.1)
+  --black_30:rgba(0, 0, 0, 0.3)
+  --black_40:rgba(0, 0, 0, 0.4)
+  --black_50:rgba(0, 0, 0, 0.5)
+  --black_70:rgba(0, 0, 0, 0.7)
+  --white_20:rgba(255, 255, 255, 0.2)
+
+body
+  margin: 0
+  font-family: var(--mainFont)
+
+/* Header
+ *-------------------------
+
+.subject
+  display: flex
+  align-items: center
+  justify-content: space-between
+  z-index: 1
+  position: relative
+  margin-bottom: 30px
+
+.subject-ctg
+  letter-spacing: 8px
+  display: block
+  font-size: 1.5rem
+  font-weight: 600
+  font-family: 'Tuesday Night'
+  color: var(--primary)
+
+.subject-title
+  color: var(--grayDark)
+  font-weight: normal
+  margin-bottom: 0
+
+/*======================
+ *
+ *	02. Gallery Slider
+ *
+ *========================
+
+.gallery
+  width: 100%
+  height: 100%
+  position: relative
+  padding-top: 40px
+  background: url('../../assets/image/banner.jpg') no-repeat center (center / cover)
+
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.9) 50%, var(--white))
+
+/* Fade Carousel 
+ *-------------------------
+
+.gallery-slider
+  width: 100%
+  height: 340px
+
+  .swiper-slide
+    position: relative
+    border-radius: 10px
+    overflow: hidden
+
+    &:after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 60%)
+      opacity: 0
+      transition: all 0.4s ease-out
+
+  .swiper-slide-active:after, .swiper-slide-duplicate-active:after
+    opacity: 1
+
+  .swiper-slide
+    .swiper-caption
+      border-radius: 8px
+
+    .swiper-caption__ctg
+      transform: translate3d(0, 45px, 0)
+      opacity: 0
+      transition: all 0.4s ease-out
+
+  .swiper-slide-active .swiper-caption__ctg, .swiper-slide-duplicate-active .swiper-caption__ctg
+    opacity: 1
+    transform: none
+
+  .swiper-slide .swiper-caption__ttl
+    transform: translate3d(0, 55px, 0)
+    opacity: 0
+    transition: all 0.7s ease-out
+
+  .swiper-slide-active .swiper-caption__ttl, .swiper-slide-duplicate-active .swiper-caption__ttl
+    opacity: 1
+    transform: none
+
+  .swiper-slide img
+    display: block
+    width: auto
+    height: 100%
+    margin: 0 auto
+
+/* Thumb Slider 
+ *-------------------------
+
+.gallery-thumbs
+  padding: 0
+
+  .swiper-slide
+    text-align: center
+    overflow: hidden
+    overflow: hidden
+    cursor: pointer
+    position: relative
+    font-size: .9rem
+    color: var(--grayDark)
+    font-weight: 500
+    opacity: .5
+    padding: 25px 0
+
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 2px
+
+    &:before
+      content: ""
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      position: absolute
+      top: -10px
+      left: 50%
+      transform: translateX(-50%)
+      background-color: var(--gray)
+
+  .swiper-slide-active
+    &:after, &:before
+      background-color: var(--primary)
+
+    color: var(--primary)
+    opacity: 1
+
+  .swiper-slide img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.thumbs-container
+  height: 100%
+  display: flex
+  align-items: center
+  margin-top: 40px
+  position: relative
+  z-index: 1
+
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 2px
+    background-color: var(--gray)
+
+.gallery-thumbs__content
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+
+  > *
+    z-index: 1
+
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    width: 100%
+    height: 100%
+    background-color: var(--black_70)
+
+  .gallery-thumbs__price
+    position: absolute
+    right: 0px
+    top: 0px
+    color: var(--white)
+    background-color: var(--primary)
+    padding: 10px
+    font-size: 1rem
+
+  .gallery-thumbs__bottom
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 1rem
+    color: var(--white)
+    text-align: left
+
+.gallery-thumbs__name
+  margin-bottom: 0
+  font-weight: 600
+  font-size: 1.3rem
+
+/*======================
+ *
+ *	03. Swiper Slider 
+ *
+ *========================
+
+.swiper-slide.swiper-slide-active .gallery-thumbs__content:after
+  background-color: var(--black_30)
+
+.swiper-slide-shadow-left, .swiper-slide-shadow-right
+  display: none
+
+.swiper-caption
+  padding-right: 1rem
+  position: relative
+  z-index: 1
+  padding: 20px 10px
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+.swiper-caption__ctg
+  letter-spacing: 8px
+  display: block
+  font-size: 1.2rem
+  font-weight: 600
+  font-family: 'Tuesday Night'
+  color: var(--primary)
+
+.swiper-caption__ttl
+  font-size: 1.5rem
+  margin-bottom: 0
+  font-weight: normal
+  color: var(--grayDark)
+
+.swiper-caption__txt
+  margin-bottom: 1.2rem
+
+.swiper-caption__btn
+  background-color: var(--primary)
+  border-radius: 10px
+  color: var(--white)
+  text-decoration: none
+  padding: .6rem 1rem
+  text-transform: uppercase
+  font-weight: 600
+  display: inline-block
+  font-size: 15px
+
+.swiper-caption, .swiper-thumbs
+  height: 100%
+
+/* Navigation
+ *-------------------------
+
+.slider-navigation
+  .slider-arrow
+    position: relative
+    background: none
+    width: 2.4rem
+    height: 2.4rem
+    border-radius: 8px
+    left: auto
+    right: 0
+    margin-top: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: var(--white)
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+
+    ion-icon
+      font-size: 1.4rem
+      color: var(--primary)
+
+  .swiper-button-prev
+    margin-right: 20px
+
+.gallery
+  .swiper-button-next, .swiper-button-prev
+    background-image: none
+
+.slider-navigation
+  display: flex
+  align-items: center
