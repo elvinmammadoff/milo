@@ -12,7 +12,7 @@ After extracting the downloaded zip file, you will see the following structure:
 
 miloslider/
 ├── documentation/       # Full Documentation in HTML format
-├── demo/                # Demo files for easy setup
+├── demos/               # Demo files for easy setup
 │   ├── index.html       # Example slider file
 │   ├── assets/          # CSS, JS, and Images
 │       ├── css/         # Stylesheets
